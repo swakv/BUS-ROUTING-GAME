@@ -8,3 +8,6 @@ We would like to produce a visualization of this problem in the form of a game i
 
 ### DEMO
 [Click_to_view_video_demo] : https://www.youtube.com/watch?v=WaglcJQf6GI
+
+### Game mechanics
+https://docs.google.com/document/d/1E6KIvDErGMYsoISS8M6XG6EYcrfiS56Z7QSKOH1qP4s/edit?usp=sharing
