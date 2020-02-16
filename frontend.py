@@ -146,8 +146,8 @@ class frontEnd:
                         elif ((x <= 1095) and (x >= 1048)) and ( (y <= 660) and ( y>= 615) ):
                             self.backEnd.addBus('blue')
                         elif x <= (self.w)//2+70 and x >= self.w//2-70 and y >= (self.h+710)//2-25 and y <= (self.h+710)//2+25:
-                            # add finish screen
-                            pygame.exit()
+                            self.renderPage4()
+                            self.page = 4
                             print(self.totalCost)
         
             # Set the screen background
@@ -161,7 +161,7 @@ class frontEnd:
                 # page 2
                 self.renderPage2()
             
-            else:
+            elif self.page == 3:
                 # page 3
                 self.renderPage3(i)
                 i+=1
@@ -263,6 +263,26 @@ class frontEnd:
         # self.drawFullBar(851,119,0.75)
         pygame.time.wait(500)
         pygame.display.update()
+
+
+    def renderPage4(self):
+        self.screen.fill(BLACK)
+        
+        self.text = self.font.render("THANK YOU!", True, (255, 255, 255))
+        self.rectAddt = self.text.get_rect()
+        self.rectAddt.center = (self.w)//2, (self.h)//2
+
+        self.screen.blit(self.text, self.rectAddt)
+
+        self.textc = self.font.render("Total Cost:  "+str(self.totalCost), True, (255, 255, 255))
+        self.rectAddc = self.textc.get_rect()
+        self.rectAddc.center = (self.w)//2, (self.h - 100)//2
+
+        self.screen.blit(self.textc, self.rectAddc)
+
+        pygame.display.update()
+        
+
         
 if __name__ == "__main__":
     a= frontEnd()
