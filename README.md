@@ -7,4 +7,4 @@ Almost all students and faculty rely on them to get around campus- on time and e
 We would like to produce a visualization of this problem in the form of a game in which a player must optimize the number of buses running at a given moment of time-  to minimize the number of students waiting at a bus stop at a given time as well as the fuel consumed. To do this, we generate a score based on the player’s solution such that a better score implies a more sustainable solution.
 
 ### DEMO
-[DEMO](https://www.youtube.com/watch?v=WaglcJQf6GI)
+[Click_to_view_video_demo] : https://www.youtube.com/watch?v=WaglcJQf6GI
