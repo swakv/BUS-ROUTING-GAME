@@ -5,6 +5,7 @@ import threading
 from Main import Main
 from Mapping import Mapping
 
+
 # Define some colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
@@ -13,6 +14,7 @@ DARKGREEN = (0, 102, 0)
 YELLOW = (255, 196, 0)
 ORANGE = (255, 128, 0)
 RED = (255, 0, 0)
+BLUE = (22,118,186)
 
 MAPRED = Mapping.getMapping('red')
 MAPBLUE = Mapping.getMapping('blue')
@@ -38,7 +40,7 @@ class frontEnd:
                 
         pygame.init()
         #FONT AND TEXT FOR WELCOME SCREEN
-        self.font = pygame.font.SysFont("comicsansms", 22)
+        self.font = pygame.font.SysFont("phosphate", 23)
         self.text = self.font.render("Click to Start", True, (230, 179, 14))
         # Set the height and width of the screen
         self.w, self.h = 1200, 750
@@ -177,13 +179,27 @@ class frontEnd:
         pygame.display.update()
 
     def renderPage2(self):
+
         # page 2
-        self.text = self.font.render("WELCOME TO BUSy", True, WHITE)
-        self.screen.blit(self.text, [500, 260])
-        self.text = self.font.render("An app which helps you save the environment by reducing fuel", True, WHITE)
-        self.screen.blit(self.text, [270, 300])
-        self.text = self.font.render("used along with time and energy!", True, WHITE)
-        self.screen.blit(self.text, [400, 330])
+        pygame.draw.rect(self.screen, YELLOW, (200, 200,830,350), 2)
+        
+
+        self.text = self.font.render("WELCOME TO BUSy", True, BLUE)
+        self.screen.blit(self.text, [520, 230])
+        self.text = self.font.render("The goal of this Game is to get the lowest cost possible.", True, WHITE)
+        self.screen.blit(self.text, [290, 280])
+        self.text = self.font.render("The cost is increased as you add more buses due ", True, WHITE)
+        self.screen.blit(self.text, [330, 310])
+        self.text = self.font.render("to the increase in carbon footprint. The progress bar indicates", True, WHITE)
+        self.screen.blit(self.text, [250, 340])
+        self.text = self.font.render("the number of people waiting at the bus stop - dark green indicating", True, WHITE)
+        self.screen.blit(self.text, [230, 370])
+        self.text = self.font.render("least people and red indicating most people. The cost also increases", True, WHITE)
+        self.screen.blit(self.text, [230, 400])
+        self.text = self.font.render("as more and more people wait at the bus stop.", True, WHITE)
+        self.screen.blit(self.text, [380, 430])
+        self.text = self.font.render("NOTE - EACH BUS WILL RUN 5 FOR ROUNDS AND AUTOMATICALLY TERMINATE", True, WHITE)
+        self.screen.blit(self.text, [240, 490])
         pygame.display.update()
 
     def drawFullBar(self,xCoord,yCoord,fractionFull):
